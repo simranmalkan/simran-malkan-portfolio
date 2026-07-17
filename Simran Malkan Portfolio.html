@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Simran Malkan's business analytics portfolio featuring business intelligence, research analytics, cloud data pipelines, and process improvement.">
+<title>Simran Malkan | Business Analytics & BI</title>
+<style>
+:root{
+ --ink:#0b0d12;--muted:#657080;--soft:#f4f6f8;--line:#dfe4ea;--white:#fff;
+ --dark:#0f172a;--max:1180px;--radius:30px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit}
+img{max-width:100%;display:block}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.83);backdrop-filter:blur(20px);border-bottom:1px solid rgba(223,228,234,.7)}
+.nav{max-width:var(--max);margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:-.025em;text-decoration:none}
+.links{display:flex;gap:23px;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font-size:.92rem}
+.links a:hover{color:var(--ink)}
+.wrap{max-width:var(--max);margin:auto;padding-left:24px;padding-right:24px}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:90px;background:radial-gradient(circle at 80% 20%,#eef2f6 0,transparent 35%),linear-gradient(#fff,#fafbfc)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-weight:800;font-size:.77rem;color:var(--muted)}
+h1{font-size:clamp(4rem,9vw,7.8rem);line-height:.88;letter-spacing:-.075em;margin:20px 0 28px}
+.lead{font-size:clamp(1.12rem,2vw,1.38rem);color:var(--muted);max-width:700px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{border:1px solid var(--ink);border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:700;font-size:.93rem;transition:.2s}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{padding:33px;border-radius:36px;background:var(--dark);color:#fff;box-shadow:0 35px 80px rgba(15,23,42,.22)}
+.hero-card .small{color:#94a3b8;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:800}
+.hero-card h2{font-size:2rem;line-height:1.05;letter-spacing:-.04em;margin:15px 0 24px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:18px;background:#1e293b;border-radius:20px}
+.stat strong{display:block;font-size:2rem}.stat span{color:#cbd5e1;font-size:.87rem}
+.section{padding:105px 0}
+.section-head{display:grid;grid-template-columns:.6fr 1.4fr;gap:45px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:48px}
+.section-head h2{font-size:clamp(2.4rem,5vw,4.5rem);line-height:.95;letter-spacing:-.06em;margin:0}
+.section-head p{color:var(--muted);font-size:1.08rem;max-width:760px;margin:6px 0}
+.project{margin:0 0 75px}
+.project-shell{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 18px 55px rgba(15,23,42,.08)}
+.visual{padding:15px;background:var(--soft)}
+.visual img{border-radius:20px;width:100%}
+.project-copy{padding:38px}
+.kicker{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.project h3{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.05em;margin:8px 0 15px}
+.summary{font-size:1.1rem;color:var(--muted);max-width:900px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.detail{border-top:1px solid var(--line);padding-top:16px}
+.detail h4{margin:0 0 8px;text-transform:uppercase;font-size:.8rem;letter-spacing:.1em}
+.detail p{margin:0;color:var(--muted);font-size:.95rem}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}
+.tag{background:var(--soft);border:1px solid var(--line);padding:7px 11px;border-radius:999px;font-size:.84rem}
+.split-visual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.split-visual img{height:100%;object-fit:cover}
+.dark-section{background:var(--dark);color:#fff}
+.dark-section .section-head{border-color:#334155}
+.dark-section .section-head p,.dark-section .eyebrow{color:#94a3b8}
+.credentials{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.cred{background:#1e293b;border:1px solid #334155;border-radius:22px;padding:23px;min-height:165px}
+.cred .num{font-size:.73rem;letter-spacing:.12em;color:#94a3b8;font-weight:800}
+.cred h3{margin:28px 0 6px;font-size:1.05rem}.cred p{margin:0;color:#cbd5e1;font-size:.84rem}
+.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.value-card{border:1px solid var(--line);border-radius:24px;padding:25px}
+.value-card strong{font-size:2rem;display:block;margin-bottom:20px}.value-card h3{font-size:1.05rem}.value-card p{color:var(--muted);font-size:.92rem}
+.resume-banner{background:linear-gradient(135deg,#0f172a,#334155);color:#fff;border-radius:36px;padding:55px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}
+.resume-banner h2{font-size:clamp(2rem,4vw,3.8rem);letter-spacing:-.05em;margin:0 0 12px}.resume-banner p{color:#cbd5e1;margin:0}
+.contact{text-align:center;padding:120px 24px;background:linear-gradient(#fff,#f2f5f8)}
+.contact h2{font-size:clamp(3rem,7vw,6rem);line-height:.93;letter-spacing:-.065em;margin:15px auto 22px;max-width:900px}
+.contact p{color:var(--muted);font-size:1.1rem}
+footer{text-align:center;border-top:1px solid var(--line);padding:25px;color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+ .links{display:none}.hero-grid,.section-head,.resume-banner{grid-template-columns:1fr}
+ .hero{padding:125px 0 80px;min-height:auto}.hero-card{margin-top:10px}
+ .three,.value-grid{grid-template-columns:1fr 1fr}.credentials{grid-template-columns:1fr 1fr}.split-visual{grid-template-columns:1fr}
+}
+@media(max-width:600px){.three,.value-grid,.credentials,.stat-grid{grid-template-columns:1fr}.project-copy{padding:26px}.resume-banner{padding:32px}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><a class="brand" href="#top">Simran Malkan</a><div class="links"><a href="#work">Featured Work</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#resume">Resume</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="top">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">Business Analyst · Analytics · Business Intelligence</div>
+   <h1>Data, made useful.</h1>
+   <p class="lead">I translate complex data into clear dashboards, operational insight, and practical recommendations that support better business decisions.</p>
+   <div class="buttons">
+    <a class="btn primary" href="#work">Explore my work</a>
+    <a class="btn" href="Simran_Malkan_Business_Analyst_Resume.pdf" download>Download resume</a>
+    <a class="btn" href="https://linkedin.com/in/simranmalkan" target="_blank" rel="noopener">LinkedIn</a>
+   </div>
+  </div>
+  <aside class="hero-card reveal">
+   <div class="small">Profile snapshot</div>
+   <h2>Business analytics with a focus on decisions, not just deliverables.</h2>
+   <div class="stat-grid">
+    <div class="stat"><strong>4</strong><span>Featured analytics projects</span></div>
+    <div class="stat"><strong>5</strong><span>Professional certifications</span></div>
+    <div class="stat"><strong>3</strong><span>Research and cloud experiences</span></div>
+    <div class="stat"><strong>6+</strong><span>Leadership involvements</span></div>
+   </div>
+  </aside>
+ </div>
+</header>
+
+<main>
+<section class="section" id="work">
+ <div class="wrap">
+  <div class="section-head reveal"><h2>Featured work</h2><p>Selected projects and research presented through the business question, analytical approach, visual output, and value created. Source code and sensitive implementation details are intentionally excluded.</p></div>
+
+  <article class="project reveal">
+   <div class="project-shell">
+    <div class="visual"><img src="Images/weather-dashboard.png" alt="Weather analytics dashboard"></div>
+    <div class="project-copy">
+     <div class="kicker">Cloud Data Pipeline · Power BI</div><h3>Real-Time Weather Analytics</h3>
+     <p class="summary">Built an end-to-end Python and Azure analytics pipeline that turns live weather observations into a structured, interactive reporting experience.</p>
+     <div class="three">
+      <div class="detail"><h4>Business question</h4><p>How can changing conditions across locations be monitored without repetitive manual data collection and reporting?</p></div>
+      <div class="detail"><h4>Solution</h4><p>Automated ingestion, transformation, storage, and visualization using Azure Event Hub, Databricks, Microsoft Fabric, and Power BI.</p></div>
+      <div class="detail"><h4>Value created</h4><p>Enabled timely KPI monitoring, trend analysis, city comparisons, anomaly visibility, and a reusable cloud workflow.</p></div>
+     </div>
+     <div class="visual">
+         <img src="Images/weather-architecture.svg" alt="Analytics toolkit map">
+     </div>     <div class="tags"><span class="tag">Python</span><span class="tag">Azure Event Hub</span><span class="tag">Azure Databricks</span><span class="tag">Microsoft Fabric</span><span class="tag">Power BI</span><span class="tag">Automation</span></div>
+    </div>
+   </div>
+  </article>
+
+  <article class="project reveal">
+   <div class="project-shell">
+    <div class="visual"><img src="Images/higher-ed-dashboard.png" alt="Higher education operations dashboard"></div>
+    <div class="project-copy">
+     <div class="kicker">Rutgers Research · Operations Analytics</div><h3>Higher Education Operations & Process Optimization</h3>
+     <p class="summary">Analyzed institutional datasets and developed executive-ready reporting to connect student success, resource allocation, and operational efficiency.</p>
+     <div class="three">
+      <div class="detail"><h4>Business question</h4><p>Where do institutional trends reveal operational friction or opportunities to better support students?</p></div>
+      <div class="detail"><h4>Solution</h4><p>Translated research questions into KPIs, Power BI dashboards, trend analysis, and process-focused recommendations.</p></div>
+      <div class="detail"><h4>Value created</h4><p>Improved visibility for strategic planning and made complex findings easier for researchers and decision-makers to interpret.</p></div>
+     </div>
+     <div class="tags"><span class="tag">Power BI</span><span class="tag">KPI Reporting</span><span class="tag">Process Improvement</span><span class="tag">Operational Analytics</span><span class="tag">Stakeholder Communication</span></div>
+    </div>
+   </div>
+  </article>
+
+  <article class="project reveal">
+   <div class="project-shell">
+    <div class="visual"><img src="Images/autism-workflow.png" alt="Autism research data workflow"></div>
+    <div class="project-copy">
+     <div class="kicker">ARESTY Research · Data Quality</div><h3>Autism & Brain Imaging Data Analytics</h3>
+     <p class="summary">Used Python and SQL to clean, validate, transform, and analyze large research datasets, then translated results into Tableau visuals for stakeholders.</p>
+     <div class="three">
+      <div class="detail"><h4>Business question</h4><p>How can complex research data be made more reliable and easier to interpret before further analysis?</p></div>
+      <div class="detail"><h4>Solution</h4><p>Applied validation checks, consistency rules, data transformations, and structured visual communication.</p></div>
+      <div class="detail"><h4>Value created</h4><p>Improved analytical readiness, reduced avoidable data-quality issues, and made technical findings more accessible.</p></div>
+     </div>
+     <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Tableau</span><span class="tag">Data Validation</span><span class="tag">Research Analytics</span></div>
+    </div>
+   </div>
+  </article>
+
+  <article class="project reveal">
+   <div class="project-shell">
+    <div class="visual"><img src="Images/ai-adoption.png" alt="AI adoption research analytics visual"></div>
+    <div class="project-copy">
+     <div class="kicker">Princeton University · Predictive Analytics</div><h3>AI Adoption & Organizational Decision-Making</h3>
+     <p class="summary">Conducted analytics on AI adoption and organizational decision-making using Python, statistical modeling, feature engineering, and predictive analysis.</p>
+     <div class="three">
+      <div class="detail"><h4>Research question</h4><p>How can data reveal the relationship between AI adoption, organizational choices, and business outcomes?</p></div>
+      <div class="detail"><h4>Solution</h4><p>Cleaned large datasets, engineered useful variables, built predictive models, and developed stakeholder-ready reports.</p></div>
+      <div class="detail"><h4>Value created</h4><p>Supported evidence-based technology evaluation and translated complex results into actionable recommendations.</p></div>
+     </div>
+     <div class="tags"><span class="tag">Python</span><span class="tag">Statistical Modeling</span><span class="tag">Predictive Analytics</span><span class="tag">Feature Engineering</span><span class="tag">Data Storytelling</span></div>
+    </div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<section class="section" id="skills">
+ <div class="wrap">
+  <div class="section-head reveal"><h2>Capabilities</h2><p>A business-focused toolkit spanning analytics, visualization, cloud technology, process improvement, and stakeholder communication.</p></div>
+  <div class="visual reveal"><img src="Images/skills-map.svg" alt="Analytics capabilities map"></div>
+  <div class="value-grid" style="margin-top:22px">
+   <div class="value-card reveal"><strong>01</strong><h3>Business intelligence</h3><p>Power BI, Tableau, Excel, semantic models, dashboards, KPI reporting, and reporting automation.</p></div>
+   <div class="value-card reveal"><strong>02</strong><h3>Data and modeling</h3><p>SQL, Python, R, validation, transformations, forecasting, feature engineering, and relational databases.</p></div>
+   <div class="value-card reveal"><strong>03</strong><h3>Cloud analytics</h3><p>Microsoft Fabric, Azure Databricks, Event Hub, Azure Data Explorer, AWS EC2, S3, and Lambda.</p></div>
+   <div class="value-card reveal"><strong>04</strong><h3>Business analysis</h3><p>Process improvement, data quality, cross-functional collaboration, storytelling, and decision support.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section dark-section" id="credentials">
+ <div class="wrap">
+  <div class="section-head reveal"><h2>Credentials</h2><p>Certifications and academic recognition supporting a foundation in analytics, cloud platforms, research, and business technology.</p></div>
+  <div class="credentials">
+   <div class="cred reveal"><div class="num">MICROSOFT</div><h3>Power BI Data Analyst Associate</h3><p>PL-300</p></div>
+   <div class="cred reveal"><div class="num">AWS</div><h3>Cloud Practitioner</h3><p>Cloud fundamentals and services</p></div>
+   <div class="cred reveal"><div class="num">GOOGLE</div><h3>Data Analytics Professional</h3><p>Analytics workflow and reporting</p></div>
+   <div class="cred reveal"><div class="num">MICROSOFT</div><h3>Excel Associate</h3><p>Spreadsheet analysis and modeling</p></div>
+   <div class="cred reveal"><div class="num">PYTHON</div><h3>Certified Professional</h3><p>Programming and analytics</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="resume">
+ <div class="wrap">
+  <div class="resume-banner reveal">
+   <div><div class="eyebrow" style="color:#94a3b8">Current resume</div><h2>Business Analyst Resume</h2><p>View my current resume, including professional experience, technical skills, research, certifications, and leadership.</p></div>
+   <a class="btn" style="background:#fff;color:#111;border-color:#fff" href="Simran_Malkan_Business_Analyst_Resume.pdf" download>Download DOCX</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="eyebrow">Open to opportunities</div>
+ <h2>Let’s make the next decision clearer.</h2>
+ <p>Business Analyst · Data Analyst · Business Intelligence · Operations Analytics</p>
+ <div class="buttons" style="justify-content:center">
+  <a class="btn primary" href="mailto:simranmalkan0@gmail.com">Email me</a>
+  <a class="btn" href="https://linkedin.com/in/simranmalkan" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="btn" href="Simran_Malkan_Business_Analyst_Resume.pdf" download>Resume</a>
+ </div>
+</section>
+</main>
+<footer>© 2026 Simran Malkan · Business Analytics Portfolio</footer>
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
